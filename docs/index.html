@@ -85,6 +85,10 @@
     margin: 0 0 14px; letter-spacing: -.01em;
   }
   .section-lede { color: var(--muted); max-width: 760px; margin: 0 0 30px; font-size: 19px; }
+  pre {
+    background: #1c1c1c; color: #fbf7f0; padding: 18px 20px; border-radius: 14px;
+    overflow-x: auto; font-size: 14px; line-height: 1.5;
+  }
   .figure {
     background: var(--card); border: 1px solid var(--line); border-radius: 22px;
     padding: 16px; margin: 26px 0;
@@ -158,6 +162,7 @@
         <a href="#evidence">Evidence</a>
         <a href="#method">Method</a>
         <a href="#status">Status</a>
+        <a href="#run">Run it</a>
         <a href="https://github.com/Chanta007/commodity-factor-model">GitHub</a>
       </div>
     </nav>
@@ -270,13 +275,36 @@
       </div>
     </section>
 
+    <section id="run">
+      <h2>Run it</h2>
+      <p class="section-lede">The public repository contains the estimator, the figures and the
+      checks. It contains no market data. The whole build takes about a minute.</p>
+      <pre><code>git clone https://github.com/Chanta007/commodity-factor-model.git
+cd commodity-factor-model
+make build</code></pre>
+      <p class="section-lede" style="margin-top:20px">Expected demo output:</p>
+      <pre><code>synthetic demonstration, no market data
+true beta      0.1700
+estimated beta 0.1684
+HAC t          41.09
+observations   520
+R2             0.769</code></pre>
+      <p class="section-lede" style="margin-top:20px">The estimator is not told the coefficient; it
+      recovers it from a synthetic panel. The demo is not the market result. It shows that the
+      design matrix, the regression and the HAC standard errors work.</p>
+    </section>
+
     <section id="read">
       <h2>Read more</h2>
       <div class="two">
         <div class="card"><div class="tag">Explainer</div><h3>The full visual story</h3>
-          <p><a href="explainer.md">Ten charts: theory, evidence, limits</a></p></div>
-        <div class="card"><div class="tag">Method</div><h3>Equations, sample, tests</h3>
+          <p><a href="explainer.html">Ten charts: theory, evidence, limits</a></p></div>
+        <div class="card"><div class="tag">Research</div><h3>The four claims</h3>
+          <p><a href="https://github.com/Chanta007/commodity-factor-model/blob/dev/docs/research.md">Evidence, scorecard, limits</a></p></div>
+        <div class="card"><div class="tag">Method</div><h3>Equations and tests</h3>
           <p><a href="https://github.com/Chanta007/commodity-factor-model/blob/dev/docs/methodology.md">One page, reproducible</a></p></div>
+        <div class="card"><div class="tag">Reproducing</div><h3>Run it yourself</h3>
+          <p><a href="https://github.com/Chanta007/commodity-factor-model/blob/dev/docs/reproducing.md">Clone, build, demo, URLs</a></p></div>
         <div class="card"><div class="tag">Roadmap</div><h3>What comes next</h3>
           <p><a href="https://github.com/Chanta007/commodity-factor-model/blob/dev/docs/roadmap.md">Built, in progress, researched</a></p></div>
         <div class="card"><div class="tag">Licences</div><h3>What is not published</h3>

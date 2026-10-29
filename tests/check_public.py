@@ -87,7 +87,8 @@ def resolve(target: str, source: pathlib.Path) -> None:
 
 def check_links() -> None:
     for name in ["README.md", "docs/explainer.md", "docs/methodology.md",
-                 "docs/roadmap.md", "docs/data-and-licences.md"]:
+                 "docs/roadmap.md", "docs/data-and-licences.md", "docs/research.md",
+                 "docs/reproducing.md"]:
         source = ROOT / name
         for target in LINK.findall(source.read_text(encoding="utf-8")):
             resolve(target, source)

@@ -19,8 +19,11 @@ Is that true in the data, how strong is it, and can it be used to form a testabl
 without confusing a plausible story with an edge?
 
 This repository is the public explanation of a private research program that tests that
-question. It contains the method, the aggregate results, the diagrams, and the honest limits.
-It contains **no market data**.
+question. It contains the method, the aggregate results, the diagrams, the estimator, and the
+honest limits. It contains **no market data**.
+
+**Repository:** `Chanta007/commodity-factor-model` · **Default branch:** `dev` ·
+**Published:** [chanta007.github.io/commodity-factor-model](https://chanta007.github.io/commodity-factor-model/)
 
 ---
 
@@ -116,12 +119,45 @@ The full status, with the next test for each item, is in [`docs/roadmap.md`](doc
 
 ---
 
+## Research, build, publish
+
+| Stage | What it means | Where |
+|---|---|---|
+| **Research** | The questions, the four claims, the evidence and the limits | [The research](docs/research.md) and [the explainer](docs/explainer.md) |
+| **Build** | A readable estimator, deterministic figures, a public-safety check and tests | [`scripts/estimate.py`](scripts/estimate.py), [`scripts/make_figures.py`](scripts/make_figures.py), [`tests/`](tests/) |
+| **Publish** | The static site on GitHub Pages, with a CI gate on every push to `dev` | [The site](https://chanta007.github.io/commodity-factor-model/) and [`pages.yml`](.github/workflows/pages.yml) |
+
+## Test it in two minutes
+
+```bash
+git clone https://github.com/Chanta007/commodity-factor-model.git
+cd commodity-factor-model
+make build
+```
+
+`make build` regenerates the figures, checks the public/private boundary, runs the tests, and
+estimates a known coefficient from synthetic data. Expected demo output:
+
+```text
+synthetic demonstration, no market data
+true beta      0.1700
+estimated beta 0.1684
+HAC t          41.09
+observations   520
+R2             0.769
+```
+
+The estimator is not told the coefficient; it recovers it from a synthetic panel. The demo is not
+the market result. It shows that the design matrix, the regression and the HAC standard errors work.
+
 ## Read the full explainer
 
 | Document | What it covers |
 |---|---|
 | [**The visual explainer**](docs/explainer.md) | The theory, the evidence and the limits, chart by chart |
+| [**The research**](docs/research.md) | The four claims, the scorecard, and what would change the conclusion |
 | [**Method in one page**](docs/methodology.md) | The equations, the sample, the tests and how to reproduce them |
+| [**Reproducing**](docs/reproducing.md) | Clone, build, demo, expected output, and the published URLs |
 | [**Roadmap**](docs/roadmap.md) | What is built, in progress and researched, with the next test |
 | [**Data and licences**](docs/data-and-licences.md) | What is not published here, and why |
 | [**Figures**](docs/figures/) | The six SVGs, generated deterministically from the aggregate numbers |
