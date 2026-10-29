@@ -35,6 +35,22 @@ The scorecard is **12 confirmed, 2 no-edge, 1 falsified**.
 - Against a random walk: worse (oil 0.120 vs 0.042; gas 0.173 vs 0.100).
 - Direction accuracy: 48.7% oil, 53.7% gas.
 
+## What the state variable looks like
+
+The seasonal z-score is not identically distributed across the two markets.
+
+| Measure | Oil (WTI) | Gas (Henry Hub) |
+|---|---|---|
+| Observations | 742 | 481 |
+| Median | -0.46 | -0.07 |
+| 10th percentile | -4.71 | -1.53 |
+| 90th percentile | 0.68 | 1.04 |
+| Share beyond one standard deviation | 44.7% | 34.9% |
+
+Oil's left tail is the 2020 storage build. A model that treated "one z-score" as the same event in
+both markets would miss that. The public figures show the aggregate distribution and a synthetic
+construction, not dated observations.
+
 ## What the research cannot say
 
 - It explains the **level** of carry relative to seasonality. It does not time week-to-week moves.

@@ -24,7 +24,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 DATA_SUFFIXES = {".csv", ".tsv", ".xls", ".xlsx", ".jsonl", ".parquet", ".feather",
                  ".zip", ".gz", ".bz2", ".h5", ".hdf5", ".db", ".sqlite", ".bin"}
 FIGURES = ["coefficients.svg", "curve.svg", "factor.svg", "pipeline.svg",
-           "scorecard.svg", "walkforward.svg"]
+           "scorecard.svg", "walkforward.svg", "zscore-distribution.svg",
+           "zscore-method.svg"]
 REQUIRED = ["## The question", "## The idea in one picture", "## What we found",
             "## How it works", "## What is built, what is in progress, what is researched",
             "## What is not in this repository"]

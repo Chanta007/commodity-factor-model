@@ -13,7 +13,7 @@ make build
 
 `make build` runs four things:
 
-1. **`make figures`**: regenerates the six SVGs from the aggregate numbers.
+1. **`make figures`**: regenerates the eight SVGs from the aggregate numbers.
 2. **`make check`**: fails on a data file, a file over 2 MB, a missing figure, a broken link, or a
    figure that is not reproducible.
 3. **`make test`**: runs the unit tests, including the synthetic estimator.

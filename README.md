@@ -43,6 +43,25 @@ A plausible number is not a finding. A finding is not a trade.
 
 ---
 
+## What scarcity looks like
+
+Scarcity is the state variable, so it is worth seeing its shape. The left panel is the **actual
+aggregate distribution** of the seasonal z-score for WTI and Henry Hub, with no dates and no series.
+The right panel is a **synthetic demonstration** of how the z-score is built, because the public
+repository does not publish dated market observations.
+
+![Distribution of the seasonal z-score](docs/figures/zscore-distribution.svg)
+
+![Synthetic demonstration of the z-score](docs/figures/zscore-method.svg)
+
+Two facts stand out. Oil's distribution is **not centred at zero**: its median is -0.46, its 10th
+percentile is -4.71, and 44.7% of weeks sit beyond one standard deviation. That left tail is the
+2020 storage build. Gas is closer to centred: median -0.07, p10 -1.53, p90 1.04, with 34.9% beyond
+one standard deviation. A model that treated "one z-score" as the same event in both markets would
+miss that.
+
+---
+
 ## What we found
 
 | Result | Oil (WTI) | Gas (Henry Hub) |
@@ -160,7 +179,7 @@ the market result. It shows that the design matrix, the regression and the HAC s
 | [**Reproducing**](docs/reproducing.md) | Clone, build, demo, expected output, and the published URLs |
 | [**Roadmap**](docs/roadmap.md) | What is built, in progress and researched, with the next test |
 | [**Data and licences**](docs/data-and-licences.md) | What is not published here, and why |
-| [**Figures**](docs/figures/) | The six SVGs, generated deterministically from the aggregate numbers |
+| [**Figures**](docs/figures/) | The eight SVGs, generated deterministically from the aggregate numbers |
 | [**Website**](https://chanta007.github.io/commodity-factor-model/) | The same story as a single scrollable page |
 
 ---

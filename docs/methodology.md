@@ -13,7 +13,8 @@ scarcity_t = (inventory_t - mean(inventory_same_week)) / sd(inventory_same_week)
 ```
 
 A high value means the stock is tight. The seasonal comparison is what removes the winter/summer
-shape that would otherwise dominate.
+shape that would otherwise dominate. The aggregate distribution and a synthetic construction are in
+[the explainer](explainer.md#3b-what-scarcity-looks-like).
 
 **Carry.** Take the first and fourth contract for the same market and compute:
 

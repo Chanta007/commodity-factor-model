@@ -217,6 +217,83 @@ def pipeline():
     write("pipeline.svg", p)
 
 
+
+def zscore_distribution():
+    """Actual aggregate distribution of the seasonal z-score, no dates."""
+    p = frame("Scarcity is not centred at zero",
+              "Distribution of the seasonal z-score, weekly, 2010 to 2024")
+    panels = [("Oil  (WTI)", [128, 54, 105, 180, 230, 31, 10, 4],
+               "n 742 · median -0.46 · p10 -4.71 · p90 0.68 · |z|>1 44.7%",
+               ORANGE, 260),
+              ("Gas  (Henry Hub)", [0, 8, 103, 141, 172, 35, 10, 12],
+               "n 481 · median -0.07 · p10 -1.53 · p90 1.04 · |z|>1 34.9%",
+               TEAL, 200)]
+    labels = ["<-4", "-3", "-2", "-1", "0", "1", "2", ">3"]
+    for panel_index, (title, counts, note, colour, peak) in enumerate(panels):
+        x0 = 60 + panel_index * 470
+        baseline = 430
+        p.append(text(x0, 175, title, size=20, weight="700", fill=colour))
+        bar_width = 38
+        for i, count in enumerate(counts):
+            height = count / peak * 230
+            x = x0 + i * (bar_width + 4)
+            p.append(rect(x, baseline - height, bar_width, height, colour, rx=4))
+        p.append(line(x0, baseline, x0 + 8 * (bar_width + 4), baseline, stroke=MUTED, sw=2))
+        for i, label in enumerate(labels):
+            p.append(text(x0 + i * (bar_width + 4) + bar_width / 2, baseline + 20, label,
+                          size=11, fill=MUTED, anchor="middle"))
+        # Zero and +/-1 boundaries.
+        for boundary, name in ((4, "0"), (5, "+1"), (3, "-1")):
+            x = x0 + boundary * (bar_width + 4)
+            p.append(line(x, 190, x, baseline, stroke=MUTED, sw=1, dash="4 4"))
+            p.append(text(x, 185, name, size=11, fill=MUTED, anchor="middle"))
+        p.append(text(x0, 500, note, size=12, fill=MUTED))
+    p.append(text(60, 535,
+                  "Bins are seasonal z-score edges; the outer bins hold the tails. Oil's left tail is",
+                  size=13, fill=MUTED))
+    p.append(text(60, 553,
+                  "the 2020 storage build. Aggregate counts only: no dates, no series.",
+                  size=13, fill=MUTED))
+    write("zscore-distribution.svg", p)
+
+
+def zscore_method():
+    """A synthetic time series that shows how the z-score is built."""
+    import random
+    p = frame("How the z-score is built",
+              "Synthetic demonstration: same week in prior years, standardised. Not market data.")
+    rng = random.Random(11)
+    z = []
+    value = 0.0
+    for _ in range(208):
+        value = 0.88 * value + rng.gauss(0.0, 0.55)
+        z.append(value)
+    x0, x1, baseline, top = 70, 930, 330, 180
+    scale = 55.0
+    # Shade the tight and loose bands.
+    p.append(rect(x0, top, x1 - x0, baseline - top - scale, "#e8f4ee", rx=0))
+    p.append(rect(x0, baseline + scale, x1 - x0, 90, "#fbeee3", rx=0))
+    p.append(line(x0, baseline, x1, baseline, stroke=MUTED, sw=2))
+    p.append(line(x0, baseline - scale, x1, baseline - scale, stroke=MUTED, sw=1, dash="4 4"))
+    p.append(line(x0, baseline + scale, x1, baseline + scale, stroke=MUTED, sw=1, dash="4 4"))
+    p.append(text(x1 - 6, baseline - scale - 8, "+1 tight", size=12, fill=MUTED, anchor="end"))
+    p.append(text(x1 - 6, baseline + scale + 18, "-1 loose", size=12, fill=MUTED, anchor="end"))
+    points = []
+    for i, value in enumerate(z):
+        x = x0 + (x1 - x0) * i / (len(z) - 1)
+        y = baseline - max(-2.8, min(2.8, value)) * scale
+        points.append("%.1f,%.1f" % (x, y))
+    p.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.5" '
+             'stroke-linejoin="round"/>' % (" ".join(points), INK))
+    p.append(text(x0, 515,
+                  "A z-score above +1 is a tight stock; below -1 is a loose one. The shaded bands",
+                  size=14, fill=MUTED))
+    p.append(text(x0, 537,
+                  "are the states the model tests. The series is generated, not observed.",
+                  size=14, fill=MUTED))
+    p.append(text(x0, 155, "synthetic, fixed seed 11 · 208 weeks", size=12, fill=MUTED))
+    write("zscore-method.svg", p)
+
 if __name__ == "__main__":
     coefficients()
     factor()
@@ -224,4 +301,6 @@ if __name__ == "__main__":
     scorecard()
     curve()
     pipeline()
+    zscore_distribution()
+    zscore_method()
     print("wrote", len(list(OUT.glob("*.svg"))), "figures to", OUT)

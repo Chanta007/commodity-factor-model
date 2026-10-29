@@ -1,6 +1,6 @@
 # The visual explainer
 
-**The Commodity Factor Model in ten charts.** Each section has one idea, one picture, and a
+**The Commodity Factor Model in eight charts.** Each section has one idea, one picture, and a
 short explanation. Read it in about ten minutes.
 
 ---
@@ -58,6 +58,23 @@ and **17.2** in gas. The sign is what the storage theory predicts.
 The controls are the policy buffer, the short rate, industrial production, the dollar, realised
 volatility and month dummies. The standard errors allow for overlapping, autocorrelated weekly
 data.
+
+---
+
+## 3b. What scarcity looks like
+
+Scarcity is the state variable. Its distribution is not the same in the two markets.
+
+![Distribution of the seasonal z-score](figures/zscore-distribution.svg)
+
+Oil's median is **-0.46**, its 10th percentile is **-4.71**, and **44.7%** of weeks sit beyond one
+standard deviation. The left tail is the 2020 storage build. Gas is closer to centred: median
+**-0.07**, p10 **-1.53**, p90 **1.04**, with **34.9%** beyond one standard deviation.
+
+The time-series panel is a **synthetic demonstration**, not market data. It shows the construction:
+a z-score above +1 is a tight stock, below -1 a loose one, and those are the states the model tests.
+
+![Synthetic demonstration of the z-score](figures/zscore-method.svg)
 
 ---
 

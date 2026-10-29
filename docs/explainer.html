@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Commodity Factor Model: the visual explainer</title>
-<meta name="description" content="Ten charts on scarcity, carry and the shape of the oil and gas curve.">
+<meta name="description" content="Eight charts on scarcity, carry and the shape of the oil and gas curve.">
 <style>
   :root {
     --bg: #fbf7f0;
@@ -172,7 +172,7 @@
   <div class="wrap">
     <div class="hero">
       <div class="eyebrow">The visual explainer</div>
-      <h1>Ten charts, one question.</h1>
+      <h1>Eight charts, one question.</h1>
       <p class="lede">How physical scarcity shapes the oil and gas curve, what survives a
       controlled test, and what the model cannot do.</p>
     </div>
@@ -210,6 +210,22 @@
       </figure>
       <p class="section-lede">The controls are the policy buffer, the short rate, industrial
       production, the dollar, realised volatility and month dummies.</p>
+    </section>
+
+    <section>
+      <h2>3b. What scarcity looks like</h2>
+      <p class="section-lede">Scarcity is the state variable. Oil's distribution is not centred:
+      median -0.46, 10th percentile -4.71, and 44.7% of weeks beyond one standard deviation.
+      The left tail is the 2020 storage build. Gas is closer to centred: median -0.07, p10 -1.53,
+      p90 1.04, 34.9% beyond one standard deviation.</p>
+      <figure class="figure">
+        <img src="figures/zscore-distribution.svg" alt="Distribution of the seasonal z-score for WTI and Henry Hub">
+        <figcaption>Actual aggregate distribution, no dates. Bins are z-score edges.</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="figures/zscore-method.svg" alt="Synthetic demonstration of the z-score construction">
+        <figcaption>Synthetic construction, fixed seed. Not market data.</figcaption>
+      </figure>
     </section>
 
     <section>

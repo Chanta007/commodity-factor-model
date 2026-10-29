@@ -160,6 +160,7 @@
       <div class="links">
         <a href="#question">The question</a>
         <a href="#evidence">Evidence</a>
+        <a href="#state">State</a>
         <a href="#method">Method</a>
         <a href="#status">Status</a>
         <a href="#run">Run it</a>
@@ -227,6 +228,21 @@
       <figure class="figure">
         <img src="figures/scorecard.svg" alt="Scorecard: 12 confirmed, 2 no edge, 1 falsified">
         <figcaption>12 confirmed, 2 no-edge, 1 falsified.</figcaption>
+      </figure>
+    </section>
+
+    <section id="state">
+      <h2>What scarcity looks like</h2>
+      <p class="section-lede">Scarcity is the state variable. Its distribution is not the same in
+      the two markets: oil's median is -0.46 with a long left tail from the 2020 storage build;
+      gas is closer to centred at -0.07.</p>
+      <figure class="figure">
+        <img src="figures/zscore-distribution.svg" alt="Distribution of the seasonal z-score for WTI and Henry Hub">
+        <figcaption>Actual aggregate distribution, no dates. Oil's 10th percentile is -4.71.</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="figures/zscore-method.svg" alt="Synthetic demonstration of the z-score construction">
+        <figcaption>Synthetic construction, fixed seed. The public repo publishes no dated observations.</figcaption>
       </figure>
     </section>
 
@@ -298,7 +314,7 @@ R2             0.769</code></pre>
       <h2>Read more</h2>
       <div class="two">
         <div class="card"><div class="tag">Explainer</div><h3>The full visual story</h3>
-          <p><a href="explainer.html">Ten charts: theory, evidence, limits</a></p></div>
+          <p><a href="explainer.html">Eight charts: theory, evidence, limits</a></p></div>
         <div class="card"><div class="tag">Research</div><h3>The four claims</h3>
           <p><a href="https://github.com/Chanta007/commodity-factor-model/blob/dev/docs/research.md">Evidence, scorecard, limits</a></p></div>
         <div class="card"><div class="tag">Method</div><h3>Equations and tests</h3>
