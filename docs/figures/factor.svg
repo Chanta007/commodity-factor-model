@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b6258"/></marker></defs>
+<rect x="0" y="0" width="1000" height="560" rx="0" fill="#fbf7f0" stroke="none" stroke-width="0" opacity="1.0"/>
+<text x="60" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" fill="#1c1c1c" font-weight="700" text-anchor="start">One factor, but not one market</text>
+<text x="60" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#6b6258" font-weight="400" text-anchor="start">First-component share of weekly changes across nine energy prices</text>
+<line x1="60" y1="132" x2="940" y2="132" stroke="#e6ded2" stroke-width="1"/>
+<rect x="190" y="217.54999999999998" width="92" height="252.45000000000002" rx="8" fill="#1b9e77" stroke="none" stroke-width="0" opacity="1.0"/>
+<text x="236" y="203.54999999999998" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#1b9e77" font-weight="700" text-anchor="middle">0.561</text>
+<text x="236" y="498" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#6b6258" font-weight="400" text-anchor="middle">observed</text>
+<rect x="310" y="360.65" width="92" height="109.35" rx="8" fill="#b9afa2" stroke="none" stroke-width="0" opacity="1.0"/>
+<text x="356" y="346.65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#b9afa2" font-weight="700" text-anchor="middle">0.243</text>
+<text x="356" y="498" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#6b6258" font-weight="400" text-anchor="middle">null</text>
+<text x="296" y="522" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#1c1c1c" font-weight="600" text-anchor="middle">All nine</text>
+<rect x="560" y="169.84999999999997" width="92" height="300.15000000000003" rx="8" fill="#1b9e77" stroke="none" stroke-width="0" opacity="1.0"/>
+<text x="606" y="155.84999999999997" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#1b9e77" font-weight="700" text-anchor="middle">0.667</text>
+<text x="606" y="498" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#6b6258" font-weight="400" text-anchor="middle">observed</text>
+<rect x="680" y="353.0" width="92" height="117.0" rx="8" fill="#b9afa2" stroke="none" stroke-width="0" opacity="1.0"/>
+<text x="726" y="339.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#b9afa2" font-weight="700" text-anchor="middle">0.260</text>
+<text x="726" y="498" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#6b6258" font-weight="400" text-anchor="middle">null</text>
+<text x="666" y="522" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#1c1c1c" font-weight="600" text-anchor="middle">Excluding gas</text>
+<line x1="60" y1="470" x2="940" y2="470" stroke="#6b6258" stroke-width="2"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b6258"/></marker></defs>
+<rect x="0" y="0" width="1000" height="560" rx="0" fill="#fbf7f0" stroke="none" stroke-width="0" opacity="1.0"/>
+<text x="60" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" fill="#1c1c1c" font-weight="700" text-anchor="start">It beats a seasonal naive, not a random walk</text>
+<text x="60" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#6b6258" font-weight="400" text-anchor="start">Out-of-sample mean absolute error, expanding window</text>
+<line x1="60" y1="132" x2="940" y2="132" stroke="#e6ded2" stroke-width="1"/>
+<rect x="220" y="346.0" width="84" height="84.0" rx="8" fill="#1b9e77" stroke="none" stroke-width="0" opacity="1.0"/>
+<text x="262" y="334.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#1b9e77" font-weight="700" text-anchor="middle">0.120</text>
+<text x="262" y="456" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#6b6258" font-weight="400" text-anchor="middle">model</text>
+<rect x="330" y="312.4" width="84" height="117.60000000000001" rx="8" fill="#b9afa2" stroke="none" stroke-width="0" opacity="1.0"/>
+<text x="372" y="300.4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#b9afa2" font-weight="700" text-anchor="middle">0.168</text>
+<text x="372" y="456" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#6b6258" font-weight="400" text-anchor="middle">seasonal naive</text>
+<text x="317" y="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#1c1c1c" font-weight="600" text-anchor="middle">Oil</text>
+<text x="317" y="510" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1b9e77" font-weight="700" text-anchor="middle">-28% lower error</text>
+<rect x="600" y="308.9" width="84" height="121.1" rx="8" fill="#1b9e77" stroke="none" stroke-width="0" opacity="1.0"/>
+<text x="642" y="296.9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#1b9e77" font-weight="700" text-anchor="middle">0.173</text>
+<text x="642" y="456" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#6b6258" font-weight="400" text-anchor="middle">model</text>
+<rect x="710" y="171.7" width="84" height="258.3" rx="8" fill="#b9afa2" stroke="none" stroke-width="0" opacity="1.0"/>
+<text x="752" y="159.7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#b9afa2" font-weight="700" text-anchor="middle">0.369</text>
+<text x="752" y="456" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#6b6258" font-weight="400" text-anchor="middle">seasonal naive</text>
+<text x="697" y="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#1c1c1c" font-weight="600" text-anchor="middle">Gas</text>
+<text x="697" y="510" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1b9e77" font-weight="700" text-anchor="middle">-53% lower error</text>
+<line x1="60" y1="430" x2="940" y2="430" stroke="#6b6258" stroke-width="2"/>
+</svg>

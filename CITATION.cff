@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this model or its figures, please cite this repository."
+title: "The Commodity Factor Model: scarcity, carry and the shape of the oil and gas curve"
+abstract: >-
+  A visual, reproducible study of how physical scarcity shapes the oil and gas
+  futures curve. The model relates a seasonal inventory z-score to the
+  annualised slope of the curve, tested with controlled regressions, a
+  common-factor null, state splits and an expanding-window walk-forward. The
+  repository publishes the method, aggregate results and figures, and no market
+  data.
+authors:
+  - name: "Chanta007"
+version: "1.0.0"
+date-released: "2026-10-29"
+url: "https://github.com/Chanta007/commodity-factor-model"
+repository-code: "https://github.com/Chanta007/commodity-factor-model"
+license: "CC-BY-4.0"
+keywords:
+  - commodities
+  - oil
+  - natural gas
+  - factor model
+  - futures curve
+  - storage theory

@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Commodity Factor Model: the visual explainer</title>
+<meta name="description" content="Ten charts on scarcity, carry and the shape of the oil and gas curve.">
+<style>
+  :root {
+    --bg: #fbf7f0;
+    --ink: #1c1c1c;
+    --muted: #6b6258;
+    --line: #e6ded2;
+    --card: #ffffff;
+    --orange: #d95f02;
+    --teal: #1b9e77;
+    --red: #c0392b;
+    --amber: #d99a00;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    font-size: 17px;
+    overflow-x: hidden;
+  }
+  a { color: var(--orange); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+  header {
+    position: sticky; top: 0; z-index: 5;
+    background: rgba(251, 247, 240, .94);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 0; gap: 20px;
+  }
+  nav .brand { font-weight: 700; letter-spacing: .02em; }
+  nav .links { display: flex; gap: 22px; flex-wrap: wrap; }
+  nav .links a { color: var(--muted); font-size: 15px; }
+  nav .links a:hover { color: var(--ink); }
+  .hero { padding: 76px 0 30px; }
+  .eyebrow {
+    text-transform: uppercase; letter-spacing: .14em; font-size: 12px;
+    font-weight: 700; color: var(--teal); margin-bottom: 14px;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 6vw, 72px);
+    line-height: 1.05; margin: 0 0 20px; letter-spacing: -.02em;
+    overflow-wrap: break-word;
+  }
+  .lede { font-size: clamp(19px, 2.2vw, 24px); color: var(--muted); max-width: 760px; }
+  .buttons { display: flex; gap: 14px; margin-top: 30px; flex-wrap: wrap; }
+  .button {
+    display: inline-block; padding: 12px 20px; border-radius: 999px;
+    font-weight: 700; font-size: 15px; border: 1px solid var(--ink);
+  }
+  .button.primary { background: var(--ink); color: var(--bg); }
+  .button.primary:hover { background: var(--orange); border-color: var(--orange); text-decoration: none; }
+  .button.ghost { color: var(--ink); }
+  .button.ghost:hover { text-decoration: none; background: var(--card); }
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    margin: 54px 0 10px;
+  }
+  .stat {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    padding: 20px 20px 18px;
+  }
+  .stat .number { font-size: 34px; font-weight: 800; line-height: 1.1; }
+  .stat .number.oil { color: var(--orange); }
+  .stat .number.gas { color: var(--teal); }
+  .stat .label { color: var(--muted); font-size: 14px; margin-top: 6px; }
+  section { padding: 64px 0; border-top: 1px solid var(--line); }
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 3.6vw, 44px); line-height: 1.12;
+    margin: 0 0 14px; letter-spacing: -.01em;
+  }
+  .section-lede { color: var(--muted); max-width: 760px; margin: 0 0 30px; font-size: 19px; }
+  .figure {
+    background: var(--card); border: 1px solid var(--line); border-radius: 22px;
+    padding: 16px; margin: 26px 0;
+    box-shadow: 0 10px 30px rgba(28, 28, 28, .04);
+  }
+  .figure img { display: block; width: 100%; height: auto; border-radius: 12px; }
+  .figure figcaption { color: var(--muted); font-size: 14px; padding: 12px 6px 2px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+    padding: 24px;
+  }
+  .card h3 { margin: 0 0 8px; font-size: 20px; }
+  .card p { margin: 0; color: var(--muted); }
+  .card .tag {
+    display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--teal); margin-bottom: 10px;
+  }
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 26px; }
+  .step {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 18px 16px;
+  }
+  .step .n { font-size: 13px; font-weight: 800; color: var(--teal); }
+  .step h4 { margin: 8px 0 4px; font-size: 17px; }
+  .step p { margin: 0; font-size: 14px; color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; margin: 22px 0; font-size: 16px; }
+  th, td { text-align: left; padding: 13px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 13px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+  tr:last-child td { border-bottom: 0; }
+  .callout {
+    background: #fff6ec; border: 1px solid #f0d6b6; border-radius: 20px;
+    padding: 24px 26px; margin: 30px 0;
+  }
+  .callout strong { color: var(--orange); }
+  .limit {
+    background: var(--card); border-left: 5px solid var(--red);
+    border-radius: 14px; padding: 20px 22px; margin-top: 26px;
+  }
+  .limit p { margin: 0; color: var(--muted); }
+  footer { padding: 48px 0 70px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer a { color: var(--muted); text-decoration: underline; }
+  @media (max-width: 900px) {
+    .stats { grid-template-columns: 1fr 1fr; }
+    .two { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr 1fr; }
+    nav .links { display: none; }
+  }
+  @media (max-width: 560px) {
+    .stats { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    body { font-size: 16px; }
+    .figure { overflow-x: auto; }
+    .figure img { min-width: 640px; }
+    .figure figcaption { position: sticky; left: 0; }
+  }
+  @media print {
+    header, .buttons { display: none; }
+    body { background: #fff; }
+    section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand"><a href="index.html">The Commodity Factor Model</a></div>
+      <div class="links">
+        <a href="index.html#question">Overview</a>
+        <a href="https://github.com/Chanta007/commodity-factor-model/blob/dev/docs/methodology.md">Method</a>
+        <a href="https://github.com/Chanta007/commodity-factor-model/blob/dev/docs/roadmap.md">Roadmap</a>
+        <a href="https://github.com/Chanta007/commodity-factor-model">GitHub</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <div class="eyebrow">The visual explainer</div>
+      <h1>Ten charts, one question.</h1>
+      <p class="lede">How physical scarcity shapes the oil and gas curve, what survives a
+      controlled test, and what the model cannot do.</p>
+    </div>
+
+    <section>
+      <h2>1. The question</h2>
+      <p class="section-lede">When the stock is low relative to the same week in prior years, the
+      nearby barrel should be worth more than the deferred one. The curve should backwardate. Is
+      that true, how strong is it, and can it frame a trade idea without confusing a story with an
+      edge?</p>
+      <figure class="figure">
+        <img src="figures/pipeline.svg" alt="Five jobs: data, state, evidence, gates, idea">
+        <figcaption>Five jobs, in order. A plausible number is not a finding, and a finding is not a trade.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>2. The shape of the curve</h2>
+      <p class="section-lede">Carry is the annualised three-month slope, <code>4 × ln(nearby / fourth)</code>.
+      Positive is backwardation, negative is contango. The model measures the slope, not the level.</p>
+      <figure class="figure">
+        <img src="figures/curve.svg" alt="Schematic: backwardation and contango">
+        <figcaption>Two shapes of the same curve. Schematic, not data.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>3. Scarcity moves the curve</h2>
+      <p class="section-lede">Scarcity is a seasonal z-score: this week's inventory against the
+      same ISO week in the prior five years. The coefficient is the change in annualised carry for
+      a one-standard-deviation increase, holding the controls fixed.</p>
+      <figure class="figure">
+        <img src="figures/coefficients.svg" alt="Oil 0.0311, gas 0.1724">
+        <figcaption>Oil 0.0311 (t 3.49); gas 0.1724 (t 6.86). HAC standard errors.</figcaption>
+      </figure>
+      <p class="section-lede">The controls are the policy buffer, the short rate, industrial
+      production, the dollar, realised volatility and month dummies.</p>
+    </section>
+
+    <section>
+      <h2>4. Gas is the stronger market</h2>
+      <p class="section-lede">Gas fits better: R² 0.739 against 0.140 for oil. Out of sample, the
+      model's error is 28.3% lower than a seasonal naive for oil and 53.2% lower for gas.</p>
+      <figure class="figure">
+        <img src="figures/walkforward.svg" alt="Out-of-sample error versus seasonal naive">
+        <figcaption>It beats a seasonal naive. A random walk still wins.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>5. The state matters, in two ways</h2>
+      <p class="section-lede">Tight storage is a level shift: it raises backwardation by 0.149 in
+      oil (t 5.28) and 0.299 in gas (t 6.15). The post-2020 change is a slope change: 0.023 to
+      0.125 in oil, 0.167 to 0.413 in gas. The gas difference is the robust one.</p>
+    </section>
+
+    <section>
+      <h2>6. The weekly build adds little</h2>
+      <p class="section-lede">Once the level is known, the week-on-week build has the right sign
+      and no edge: -0.052 (t -1.04) in oil, -0.100 (t -0.96) in gas. The level matters; the flow is
+      context.</p>
+    </section>
+
+    <section>
+      <h2>7. One factor, but not one market</h2>
+      <p class="section-lede">The median first-component share is 0.561 against a null of 0.243,
+      rising to 0.667 when gas is excluded. The common factor is liquids. Gas is a second factor.</p>
+      <figure class="figure">
+        <img src="figures/factor.svg" alt="Common-factor share versus null">
+        <figcaption>The observed share is more than twice the null.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>8. The scorecard</h2>
+      <p class="section-lede">Every rule is written down before it is run. 12 confirmed, 2 no-edge,
+      1 falsified. The no-edge rules are the weekly build in oil and gas; the falsified rule is the
+      gas convexity term.</p>
+      <figure class="figure">
+        <img src="figures/scorecard.svg" alt="12 confirmed, 2 no edge, 1 falsified">
+        <figcaption>The scorecard records tests, not a guarantee.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>9. What it is good at, and what it is not</h2>
+      <table>
+        <thead><tr><th>Good at</th><th>Not good at</th></tr></thead>
+        <tbody>
+          <tr><td>Explaining the level of carry relative to seasonality</td><td>Timing week-to-week changes</td></tr>
+          <tr><td>Ranking oil against gas: gas is stronger</td><td>Forecasting the price</td></tr>
+          <tr><td>Telling a liquids move from a gas move</td><td>Treating energy as one market</td></tr>
+          <tr><td>Showing when the state changes the slope</td><td>Measuring a live carry: the stored curve ends 2024-04-05</td></tr>
+        </tbody>
+      </table>
+      <div class="callout"><strong>The honest sentence.</strong> The model beats a seasonal naive
+      and loses to a random walk. It is a map of where the curve is inconsistent with the stock,
+      not a timing model.</div>
+    </section>
+
+    <section>
+      <h2>10. How to use it</h2>
+      <p class="section-lede">The daily loop is a comparison, not a signal service.</p>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h4>Refresh</h4><p>Note any revision.</p></div>
+        <div class="step"><div class="n">2</div><h4>Scarcity</h4><p>Use the prior published stock.</p></div>
+        <div class="step"><div class="n">3</div><h4>Carry</h4><p>Measure the slope.</p></div>
+        <div class="step"><div class="n">4</div><h4>Gap</h4><p>Compare observed with implied.</p></div>
+        <div class="step"><div class="n">5</div><h4>Gate</h4><p>State, factor, catalyst, cost.</p></div>
+      </div>
+      <p class="section-lede" style="margin-top:26px">If any step is missing, the answer is
+      <strong>no idea</strong>, which is a valid output.</p>
+    </section>
+
+    <section>
+      <h2>Read more</h2>
+      <div class="two">
+        <div class="card"><div class="tag">Method</div><h3>Equations and tests</h3>
+          <p><a href="https://github.com/Chanta007/commodity-factor-model/blob/dev/docs/methodology.md">One page, reproducible</a></p></div>
+        <div class="card"><div class="tag">Roadmap</div><h3>What comes next</h3>
+          <p><a href="https://github.com/Chanta007/commodity-factor-model/blob/dev/docs/roadmap.md">Built, in progress, researched</a></p></div>
+        <div class="card"><div class="tag">Licences</div><h3>What is not published</h3>
+          <p><a href="https://github.com/Chanta007/commodity-factor-model/blob/dev/docs/data-and-licences.md">Data and terms</a></p></div>
+        <div class="card"><div class="tag">Source</div><h3>The repository</h3>
+          <p><a href="https://github.com/Chanta007/commodity-factor-model">github.com/Chanta007/commodity-factor-model</a></p></div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Text and figures: Creative Commons Attribution 4.0. Scripts: MIT. Research, not investment
+    advice. No market data is published here.</p>
+    <p><a href="index.html">Back to the landing page</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

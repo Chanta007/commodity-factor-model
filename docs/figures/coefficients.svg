@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b6258"/></marker></defs>
+<rect x="0" y="0" width="1000" height="560" rx="0" fill="#fbf7f0" stroke="none" stroke-width="0" opacity="1.0"/>
+<text x="60" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" fill="#1c1c1c" font-weight="700" text-anchor="start">Scarcity moves the curve</text>
+<text x="60" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#6b6258" font-weight="400" text-anchor="start">Annualised carry per one standard deviation of seasonal scarcity</text>
+<line x1="60" y1="132" x2="940" y2="132" stroke="#e6ded2" stroke-width="1"/>
+<text x="60" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#1c1c1c" font-weight="600" text-anchor="start">Oil  (WTI)</text>
+<rect x="60" y="212" width="640" height="34" rx="8" fill="#e6ded2" stroke="none" stroke-width="0" opacity="1.0"/>
+<rect x="60" y="212" width="99.52" height="34" rx="8" fill="#d95f02" stroke="none" stroke-width="0" opacity="1.0"/>
+<text x="173.51999999999998" y="236" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#d95f02" font-weight="700" text-anchor="start">0.0311  (t 3.49)</text>
+<text x="60" y="326" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#1c1c1c" font-weight="600" text-anchor="start">Gas  (Henry Hub)</text>
+<rect x="60" y="342" width="640" height="34" rx="8" fill="#e6ded2" stroke="none" stroke-width="0" opacity="1.0"/>
+<rect x="60" y="342" width="551.68" height="34" rx="8" fill="#1b9e77" stroke="none" stroke-width="0" opacity="1.0"/>
+<text x="625.68" y="366" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#1b9e77" font-weight="700" text-anchor="start">0.1724  (t 6.86)</text>
+<text x="60" y="470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#6b6258" font-weight="400" text-anchor="start">Controlled regression: policy buffer, short rate, industrial production, dollar,</text>
+<text x="60" y="495" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#6b6258" font-weight="400" text-anchor="start">realised volatility and month dummies. A higher coefficient means the same</text>
+<text x="60" y="520" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#6b6258" font-weight="400" text-anchor="start">scarcity reading implies more backwardation. HAC t-statistics are in parentheses.</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" role="img">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b6258"/></marker></defs>
+<rect x="0" y="0" width="1000" height="460" rx="0" fill="#fbf7f0" stroke="none" stroke-width="0" opacity="1.0"/>
+<text x="60" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" fill="#1c1c1c" font-weight="700" text-anchor="start">The scorecard</text>
+<text x="60" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#6b6258" font-weight="400" text-anchor="start">Every rule is registered before it is run</text>
+<line x1="60" y1="132" x2="940" y2="132" stroke="#e6ded2" stroke-width="1"/>
+<rect x="70" y="180" width="270" height="190" rx="20" fill="#ffffff" stroke="#e6ded2" stroke-width="2" opacity="1.0"/>
+<text x="205" y="285" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="76" fill="#1b9e77" font-weight="700" text-anchor="middle">12</text>
+<text x="205" y="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#1c1c1c" font-weight="600" text-anchor="middle">confirmed</text>
+<rect x="370" y="180" width="270" height="190" rx="20" fill="#ffffff" stroke="#e6ded2" stroke-width="2" opacity="1.0"/>
+<text x="505" y="285" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="76" fill="#d99a00" font-weight="700" text-anchor="middle">2</text>
+<text x="505" y="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#1c1c1c" font-weight="600" text-anchor="middle">no edge</text>
+<rect x="670" y="180" width="270" height="190" rx="20" fill="#ffffff" stroke="#e6ded2" stroke-width="2" opacity="1.0"/>
+<text x="805" y="285" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="76" fill="#c0392b" font-weight="700" text-anchor="middle">1</text>
+<text x="805" y="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#1c1c1c" font-weight="600" text-anchor="middle">falsified</text>
+<text x="60" y="420" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#6b6258" font-weight="400" text-anchor="start">The falsified rule is the gas convexity term. The two no-edge rules are the</text>
+<text x="60" y="440" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#6b6258" font-weight="400" text-anchor="start">weekly inventory build in oil and gas.</text>
+</svg>
