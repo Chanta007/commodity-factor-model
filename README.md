@@ -24,6 +24,7 @@ honest limits. It contains **no market data**.
 
 **Repository:** `Chanta007/commodity-factor-model` · **Default branch:** `dev` ·
 **Published:** [chanta007.github.io/commodity-factor-model](https://chanta007.github.io/commodity-factor-model/)
+**The other block:** [The Rates Factor Model](https://chanta007.github.io/rates-factor-model/)
 
 ---
 
